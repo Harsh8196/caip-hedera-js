@@ -1,4 +1,4 @@
-# caip-hedera [![npm version](https://badge.fury.io/js/caip.svg)](https://badge.fury.io/js/caip)
+# caip-hedera 
 
 CAIP standard utils
 
