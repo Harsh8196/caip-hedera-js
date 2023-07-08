@@ -1,0 +1,69 @@
+{
+  "name": "caip-hedera",
+  "description": "CAIP standard utils",
+  "version": "0.1.0",
+  "author": "Harsh Mashruwala <github.com/Harsh8196>",
+  "license": "MIT",
+  "keywords": [
+    "caip",
+    "blockchain",
+    "standard",
+    "chain-agnostic",
+    "parse",
+    "format",
+    "chainId",
+    "accountId",
+    "assetId"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "browser": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/index.umd.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "homepage": "https://github.com/Harsh8196/caip-hedera-js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harsh8196/caip-hedera-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Harsh8196/caip-hedera-js/issues"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "clean": "del -rf dist",
+    "build:microbundle": "./node_modules/.bin/microbundle --compress=false",
+    "build": "yarn clean && yarn build:microbundle",
+    "test": "tsdx test ./test",
+    "lint": "tsdx lint src test",
+    "prepare": "yarn lint && yarn build && yarn test"
+  },
+  "devDependencies": {
+    "@types/jest": "25.1.1",
+    "@types/node": "13.7.0",
+    "husky": "4.2.1",
+    "microbundle": "^0.14.2",
+    "tsdx": "0.12.3",
+    "tslib": "1.10.0",
+    "typescript": "3.7.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": false,
+    "trailingComma": "es5"
+  }
+}
